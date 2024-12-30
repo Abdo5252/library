@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Library and Wishlist Manager</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .section {
+      margin-bottom: 20px;
+    }
+    input, button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    li {
+      background: #f0f0f0;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Library and Wishlist Manager</h1>
+    <div class="section">
+      <h2>Add Books</h2>
+      <input type="text" id="bookName" placeholder="Enter a book you own">
+      <button onclick="addToLibrary()">Add to Library</button>
+    </div>
+
+    <div class="section">
+      <h2>Wishlist</h2>
+      <input type="text" id="wishBook" placeholder="Enter a book you wish to have">
+      <button onclick="addToWishlist()">Add to Wishlist</button>
+    </div>
+
+    <div class="section">
+      <h2>Actions</h2>
+      <input type="text" id="acquiredBook" placeholder="Enter a book from your wishlist">
+      <button onclick="acquireBook()">Acquire Book</button>
+
+      <input type="text" id="donatedBook" placeholder="Enter a book from your library to donate">
+      <button onclick="donateBook()">Donate Book</button>
+    </div>
+
+    <div class="section">
+      <h2>Your Library</h2>
+      <ul id="libraryList"></ul>
+    </div>
+
+    <div class="section">
+      <h2>Your Wishlist</h2>
+      <ul id="wishlistList"></ul>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
